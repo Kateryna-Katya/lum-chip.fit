@@ -154,3 +154,25 @@ lucide.createIcons();
             opacity: 1
         });
     });
+    // 7. Bento Grid Animation
+    gsap.to('.animate-expertise-title', {
+        scrollTrigger: {
+            trigger: '.expertise',
+            start: 'top 80%',
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.6
+    });
+
+    gsap.from('.animate-bento', {
+        scrollTrigger: {
+            trigger: '.bento-grid',
+            start: 'top 80%',
+        },
+        scale: 0.8,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: "back.out(1.7)"
+    });
