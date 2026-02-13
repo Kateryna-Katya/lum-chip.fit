@@ -331,3 +331,113 @@ h4,
         opacity: 0.5;
     }
 }
+/* --- Services Section --- */
+.services {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.services__header {
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    background: var(--primary);
+    display: inline-block;
+    padding: 5px 15px;
+    border: 3px solid var(--border);
+    box-shadow: 6px 6px 0px var(--border);
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- Service Card (Neobrutalism) --- */
+.service-card {
+    background: var(--bg);
+    border: 3px solid var(--border);
+    padding: 40px;
+    box-shadow: 8px 8px 0px var(--border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 13px 13px 0px var(--border);
+    background: var(--white);
+}
+
+.service-card__icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.service-card__icon svg {
+    width: 30px;
+    height: 30px;
+    stroke-width: 2.5px;
+}
+
+.service-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card__text {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.service-card__link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.service-card__link:hover {
+    gap: 15px;
+}
+
+/* Initial state for animation */
+.animate-reveal,
+.animate-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 60px 0;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+}

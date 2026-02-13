@@ -76,3 +76,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+// 4. Services Section Animation
+    gsap.to('.animate-reveal', {
+        scrollTrigger: {
+            trigger: '.services',
+            start: 'top 80%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out"
+    });
+
+    gsap.to('.animate-card', {
+        scrollTrigger: {
+            trigger: '.services__grid',
+            start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "back.out(1.2)"
+    });
+
+    // Re-init icons for new content
+    lucide.createIcons();
