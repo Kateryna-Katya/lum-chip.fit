@@ -441,3 +441,113 @@ h4,
         padding: 30px;
     }
 }
+/* --- Methodology Section --- */
+.method {
+    padding: 100px 0;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+
+.animate-method-title {
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.method__wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+/* Вертикальная линия */
+.method__progress-line {
+    position: absolute;
+    left: 45px;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: var(--white);
+    border: 3px solid var(--border);
+}
+
+.method__progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    /* Будет расти через JS */
+    background: var(--primary);
+}
+
+.method__step {
+    position: relative;
+    margin-bottom: 80px;
+    opacity: 0.3;
+    /* Приглушаем неактивные шаги */
+    transform: translateX(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.method__step.is-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.method__number {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border: 3px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: 4px 4px 0px var(--border);
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.method__step.is-active .method__number {
+    background: var(--primary);
+    transform: scale(1.1);
+    box-shadow: 6px 6px 0px var(--border);
+}
+
+.method__step-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.method__step-text {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .method__wrapper {
+        padding-left: 60px;
+    }
+
+    .method__progress-line {
+        left: 25px;
+    }
+
+    .method__number {
+        left: -65px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .method__step-title {
+        font-size: 1.4rem;
+    }
+}

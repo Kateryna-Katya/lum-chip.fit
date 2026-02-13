@@ -101,4 +101,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Re-init icons for new content
-    lucide.createIcons();
+lucide.createIcons();
+    // 5. Methodology Progress Animation
+    gsap.to('.animate-method-title', {
+        scrollTrigger: {
+            trigger: '.method',
+            start: 'top 80%',
+        },
+        x: 0,
+        opacity: 1,
+        duration: 0.8
+    });
+
+    // Анимация закрашивания линии
+    gsap.to('.method__progress-bar', {
+        height: '100%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.method__wrapper',
+            start: 'top 60%',
+            end: 'bottom 60%',
+            scrub: true
+        }
+    });
+
+    // Активация каждого шага при скролле
+    const steps = document.querySelectorAll('.method__step');
+    steps.forEach((step, index) => {
+        ScrollTrigger.create({
+            trigger: step,
+            start: 'top 60%',
+            onEnter: () => step.classList.add('is-active'),
+            onLeaveBack: () => step.classList.remove('is-active')
+        });
+    });
