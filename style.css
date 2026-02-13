@@ -316,7 +316,7 @@ h4,
     }
 
     .hero__title {
-        font-size: 2.8rem;
+        font-size: 2.0rem;
     }
 
     .hero__subtitle {
@@ -625,7 +625,7 @@ h4,
 }
 
 .case-card__title {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -1132,4 +1132,53 @@ h4,
         flex-direction: column;
         text-align: center;
     }
+}
+@media (max-width: 992px) {
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        /* Полная ширина без оверлея */
+        height: 100vh;
+        background: var(--primary);
+        /* Фирменный желтый для меню */
+        border-left: 5px solid var(--border);
+        z-index: 1050;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+    }
+
+    .nav.is-active {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Необрутализм любит выравнивание по левому краю */
+        gap: 25px;
+        padding-left: 10%;
+    }
+
+    .nav__link {
+        font-size: 2.5rem;
+        font-family: 'Space Grotesk', sans-serif;
+        color: var(--dark);
+        -webkit-text-stroke: 1.5px var(--border);
+        opacity: 0;
+        /* Начальное состояние для GSAP */
+        transform: translateX(50px);
+    }
+}
+
+/* Убираем оверлей из HTML или просто скрываем его */
+.menu-overlay {
+    display: none !important;
 }

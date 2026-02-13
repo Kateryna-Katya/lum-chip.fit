@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
-<script src="https://unpkg.com/split-type"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
@@ -54,22 +54,23 @@
     <main>
 <section class="hero" id="hero">
     <div class="hero__bg">
-        <div class="hero__pattern hero__pattern--1"></div>
-        <div class="hero__pattern hero__pattern--2"></div>
+        <div class="hero__pattern hero__pattern--1" data-aos="zoom-in" data-aos-duration="1200"></div>
+        <div class="hero__pattern hero__pattern--2" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1200">
+        </div>
     </div>
 
     <div class="container hero__container">
         <div class="hero__content">
-            <h1 class="hero__title animate-text">
+            <h1 class="hero__title" data-aos="fade-up" data-aos-duration="800">
                 Инновационная технология.<br>
                 Решения, которые<br>
                 <span class="highlight">меняют правила игры.</span>
             </h1>
-            <p class="hero__subtitle animate-opacity">
+            <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                 Переосмыслите подход к развитию. Платформа года и экспертная поддержка на всех этапах для оценки
                 перспектив вашего проекта.
             </p>
-            <div class="hero__actions animate-opacity">
+            <div class="hero__actions" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                 <a href="#contact" class="btn btn--hero">Оценить перспективы</a>
                 <a href="#services" class="btn btn--outline">Узнать детали</a>
             </div>
@@ -78,13 +79,13 @@
 </section>
 <section class="services" id="services">
     <div class="container">
-        <div class="services__header animate-reveal">
+        <div class="services__header" data-aos="fade-right" data-aos-duration="800">
             <h2 class="section-title">Наши Услуги</h2>
             <p class="section-subtitle">Практики, применимые уже сегодня, для достижения ваших целей.</p>
         </div>
 
         <div class="services__grid">
-            <div class="service-card animate-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="service-card__icon">
                     <i data-lucide="trending-up"></i>
                 </div>
@@ -96,7 +97,7 @@
                 <a href="#contact" class="service-card__link">Запросить доступ <i data-lucide="arrow-right"></i></a>
             </div>
 
-            <div class="service-card animate-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
                 <div class="service-card__icon">
                     <i data-lucide="cpu"></i>
                 </div>
@@ -108,7 +109,7 @@
                 <a href="#contact" class="service-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
             </div>
 
-            <div class="service-card animate-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-card__icon">
                     <i data-lucide="briefcase"></i>
                 </div>
@@ -124,14 +125,14 @@
 </section>
 <section class="method" id="method">
     <div class="container">
-        <h2 class="section-title animate-method-title">Наш метод</h2>
+        <h2 class="section-title" data-aos="fade-right">Наш метод</h2>
 
         <div class="method__wrapper">
-            <div class="method__progress-line">
+            <div class="method__progress-line" data-aos="fade-down" data-aos-duration="1000">
                 <div class="method__progress-bar"></div>
             </div>
 
-            <div class="method__step animate-step">
+            <div class="method__step" data-aos="fade-left" data-aos-delay="100">
                 <div class="method__number">01</div>
                 <div class="method__info">
                     <h3 class="method__step-title">Анализ и оценка</h3>
@@ -142,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="method__step animate-step">
+            <div class="method__step" data-aos="fade-left" data-aos-delay="200">
                 <div class="method__number">02</div>
                 <div class="method__info">
                     <h3 class="method__step-title">Инновационная стратегия</h3>
@@ -153,7 +154,7 @@
                 </div>
             </div>
 
-            <div class="method__step animate-step">
+            <div class="method__step" data-aos="fade-left" data-aos-delay="300">
                 <div class="method__number">03</div>
                 <div class="method__info">
                     <h3 class="method__step-title">Быстрый запуск</h3>
@@ -164,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="method__step animate-step">
+            <div class="method__step" data-aos="fade-left" data-aos-delay="400">
                 <div class="method__number">04</div>
                 <div class="method__info">
                     <h3 class="method__step-title">Масштабирование</h3>
@@ -179,13 +180,13 @@
 </section>
 <section class="cases" id="cases">
     <div class="container">
-        <div class="cases__header">
+        <div class="cases__header" data-aos="fade-up">
             <h2 class="section-title">Кейсы</h2>
             <p class="section-subtitle">Решения, которые меняют правила игры в реальном времени.</p>
         </div>
 
         <div class="cases__stack">
-            <div class="case-card animate-card-stack">
+            <div class="case-card" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div class="case-card__content">
                     <span class="case-card__tag">Fintech</span>
                     <h3 class="case-card__title">Масштабирование платформы года</h3>
@@ -207,7 +208,7 @@
                 </div>
             </div>
 
-            <div class="case-card animate-card-stack">
+            <div class="case-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="case-card__content">
                     <span class="case-card__tag">E-commerce</span>
                     <h3 class="case-card__title">Инновационная стратегия роста</h3>
@@ -229,7 +230,7 @@
                 </div>
             </div>
 
-            <div class="case-card animate-card-stack">
+            <div class="case-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
                 <div class="case-card__content">
                     <span class="case-card__tag">AI Startups</span>
                     <h3 class="case-card__title">Решения для будущего</h3>
@@ -255,10 +256,10 @@
 </section>
 <section class="expertise" id="expertise">
     <div class="container">
-        <h2 class="section-title animate-expertise-title">Наша Экспертиза</h2>
+        <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">Наша Экспертиза</h2>
 
         <div class="bento-grid">
-            <div class="bento-item bento-item--main animate-bento">
+            <div class="bento-item bento-item--main" data-aos="zoom-in" data-aos-delay="0">
                 <div class="bento-item__content">
                     <span class="bento-tag">Reliability</span>
                     <h3 class="bento-title">Проверенный партнер для вашего бизнеса</h3>
@@ -270,7 +271,7 @@
                 </div>
             </div>
 
-            <div class="bento-item bento-item--geo animate-bento">
+            <div class="bento-item bento-item--geo" data-aos="zoom-in" data-aos-delay="200">
                 <div class="bento-item__content">
                     <h3 class="bento-title">Платформа уже доступна в Европе</h3>
                     <p class="bento-text">Доступ открыт для всех стран ЕС.</p>
@@ -281,7 +282,7 @@
                 </div>
             </div>
 
-            <div class="bento-item bento-item--tall animate-bento">
+            <div class="bento-item bento-item--tall" data-aos="fade-left" data-aos-delay="400">
                 <div class="bento-item__content">
                     <h3 class="bento-title">Экспертная поддержка на всех этапах</h3>
                     <ul class="bento-list">
@@ -293,7 +294,7 @@
                 <a href="#contact" class="btn btn--bento">Запросить доступ</a>
             </div>
 
-            <div class="bento-item bento-item--tech animate-bento">
+            <div class="bento-item bento-item--tech" data-aos="fade-up" data-aos-delay="300">
                 <div class="bento-item__content">
                     <h3 class="bento-title">AI-инструменты</h3>
                     <p class="bento-text">Для решения реальных задач бизнеса.</p>
@@ -303,7 +304,7 @@
                 </div>
             </div>
 
-            <div class="bento-item bento-item--simple animate-bento">
+            <div class="bento-item bento-item--simple" data-aos="fade-up" data-aos-delay="500">
                 <div class="bento-item__content">
                     <h3 class="bento-title">Быстрый и лёгкий старт</h3>
                     <p class="bento-text">Подключение занимает 2 минуты. Удобная адаптация без сложностей.</p>
@@ -315,7 +316,7 @@
 <section class="contact" id="contact">
     <div class="container">
         <div class="contact__grid">
-            <div class="contact__info animate-contact-text">
+            <div class="contact__info" data-aos="fade-right" data-aos-duration="1000">
                 <h2 class="section-title">Начать сейчас</h2>
                 <p class="contact__subtitle">Запросите бесплатную консультацию по всем вопросам. Наш эксперт свяжется с
                     вами в течение 24 часов.</p>
@@ -334,7 +335,7 @@
                 </div>
             </div>
 
-            <div class="contact__form-wrapper animate-contact-form">
+            <div class="contact__form-wrapper" data-aos="fade-left" data-aos-duration="1000">
                 <form id="ajax-form" class="form">
                     <div class="form__group">
                         <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
@@ -445,6 +446,7 @@
 </div>
 
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
