@@ -29,3 +29,50 @@ buttons.forEach(btn => {
         gsap.to(btn, { scale: 1, duration: 0.2 });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Split Text Setup
+    const titleText = new SplitType('.animate-text', { types: 'lines, words, chars' });
+
+    // 2. Hero Animation Timeline
+    const heroTl = gsap.timeline({ delay: 0.5 });
+
+    heroTl
+        .to('.animate-text .char', {
+            y: 0,
+            rotate: 0,
+            opacity: 1,
+            stagger: 0.03,
+            duration: 0.8,
+            ease: "back.out(1.7)" /* Aggressive, brutal ease */
+        })
+        .to('.animate-opacity', {
+            y: 0,
+            opacity: 1,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: "power3.out"
+        }, "-=0.4"); // Overlap slightly with text animation
+
+    // 3. Parallax Effect on scroll for background shapes
+    gsap.to('.hero__pattern--1', {
+        yPercent: 50,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    gsap.to('.hero__pattern--2', {
+        yPercent: -70,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+});
