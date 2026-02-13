@@ -551,3 +551,128 @@ h4,
         font-size: 1.4rem;
     }
 }
+/* --- Cases Stacking Layout --- */
+.cases {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.cases__header {
+    margin-bottom: 60px;
+}
+
+.cases__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Отступ между карточками в статике */
+}
+
+.case-card {
+    position: sticky;
+    top: 120px;
+    /* Расстояние от верха при залипании */
+    background: var(--bg);
+    border: 3px solid var(--border);
+    display: flex;
+    min-height: 450px;
+    box-shadow: 10px 10px 0px var(--border);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.case-card:nth-child(1) {
+    background-color: #f9f9f9;
+}
+
+.case-card:nth-child(2) {
+    background-color: #ffffff;
+}
+
+.case-card:nth-child(3) {
+    background-color: var(--primary);
+}
+
+.case-card__content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.case-card__image {
+    flex: 1;
+    background: #ddd;
+    border-left: 3px solid var(--border);
+}
+
+.case-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-card__tag {
+    align-self: flex-start;
+    background: var(--dark);
+    color: var(--primary);
+    padding: 5px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.case-card__title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.case-card__desc {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.case-card__stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .case-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .case-card__image {
+        height: 250px;
+        border-left: none;
+        border-top: 3px solid var(--border);
+    }
+
+    .case-card__content {
+        padding: 30px;
+    }
+}

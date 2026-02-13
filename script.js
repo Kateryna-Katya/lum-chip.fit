@@ -135,3 +135,22 @@ lucide.createIcons();
             onLeaveBack: () => step.classList.remove('is-active')
         });
     });
+    // 6. Stacking Cards Animation
+    const cards = document.querySelectorAll('.animate-card-stack');
+    
+    cards.forEach((card, index) => {
+        // Эффект небольшого уменьшения предыдущей карточки, когда на неё наезжает новая
+        gsap.to(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 120px", 
+                endTrigger: ".cases__stack",
+                end: "bottom center",
+                pin: true,
+                pinSpacing: false,
+                scrub: true
+            },
+            scale: 1 - (index * 0.05), // Каждая следующая чуть меньше для эффекта глубины
+            opacity: 1
+        });
+    });
