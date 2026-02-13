@@ -312,6 +312,63 @@
         </div>
     </div>
 </section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info animate-contact-text">
+                <h2 class="section-title">Начать сейчас</h2>
+                <p class="contact__subtitle">Запросите бесплатную консультацию по всем вопросам. Наш эксперт свяжется с
+                    вами в течение 24 часов.</p>
+
+                <div class="contact__details">
+                    <div class="contact__item">
+                        <strong>Телефон:</strong>
+                        <a href="tel:+442056672491">+44 20 5667 2491</a>
+                    </div>
+                    <div class="contact__item">
+                        <strong>Email:</strong>
+                        <a href="mailto:support@<?= $fullDomain ?>">support@
+                            <?= $fullDomain ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper animate-contact-form">
+                <form id="ajax-form" class="form">
+                    <div class="form__group">
+                        <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" name="email" class="form__input" placeholder="Email" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" name="phone" id="phone-input" class="form__input"
+                            placeholder="Телефон (только цифры)" required>
+                    </div>
+
+                    <div class="form__captcha">
+                        <label for="captcha" class="form__label">Сколько будет <span
+                                id="captcha-question"></span>?</label>
+                        <input type="number" id="captcha-answer" class="form__input" placeholder="Ответ" required>
+                    </div>
+
+                    <div class="form__group form__group--checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" required>
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn--submit">Отправить запрос</button>
+
+                    <div id="form-response" class="form__message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
