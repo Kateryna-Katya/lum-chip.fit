@@ -1182,3 +1182,167 @@ h4,
 .menu-overlay {
     display: none !important;
 }
+/* --- Стили для внутренних страниц (Pages) --- */
+.pages {
+    padding: 80px 0;
+    background-color: var(--bg);
+    min-height: 80vh;
+}
+
+.pages h1 {
+    font-size: clamp(1.6rem, 4vw, 4rem);
+    background: var(--primary);
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3px solid var(--border);
+    box-shadow: 8px 8px 0px var(--border);
+    margin-bottom: 40px;
+}
+
+.pages__intro {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+/* Сетка карточек контактов */
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.contact-card {
+    background: var(--white);
+    border: 3px solid var(--border);
+    padding: 40px;
+    box-shadow: 8px 8px 0px var(--border);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 13px 13px 0px var(--border);
+}
+
+.contact-card__icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 1.1rem;
+    word-break: break-all;
+}
+
+.contact-address {
+    font-style: normal;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.contact-extra {
+    border: 3px dashed var(--border);
+    padding: 30px;
+    text-align: center;
+    background: var(--white);
+}
+
+.inline-link {
+    color: var(--dark);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.inline-link:hover {
+    background: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 25px;
+    }
+}
+/* --- Специфические стили для текстовых страниц --- */
+.pages__content {
+    background: var(--white);
+    border: 3px solid var(--border);
+    padding: 40px;
+    box-shadow: 10px 10px 0px var(--border);
+    margin-top: 20px;
+}
+
+.pages__content h2 {
+    margin: 35px 0 15px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+}
+
+.pages__content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.pages__list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.pages__list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.pages__list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border: 2px solid var(--border);
+}
+
+.pages__contact-box {
+    margin-top: 50px;
+    padding: 30px;
+    background: var(--bg);
+    border: 3px dashed var(--border);
+}
+
+.pages__contact-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.pages__contact-list li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .pages__content {
+        padding: 25px;
+    }
+}
